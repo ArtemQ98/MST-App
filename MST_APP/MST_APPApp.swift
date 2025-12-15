@@ -11,7 +11,7 @@ import SwiftUI
 struct MST_APPApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView()
         }
     }
 }
