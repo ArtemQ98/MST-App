@@ -47,8 +47,18 @@ struct PaywallView: View {
                                     .font(.headline)
                                     .foregroundStyle(.blue)
                                 Text(item.title)
+                                if item.sale > 0 {
+                                    Text("-\(item.sale)%")
+                                        .font(.footnote)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.white)
+                                        .padding(4)
+                                        .background(.blue)
+                                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                                }
                                 Spacer()
                                 Text("\(item.price) $/\(item.subType == .month ? "месяц" : "год")")
+                                
                             }
                             .contentShape(Rectangle())
                             .onTapGesture {
